@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week 6 mouse project", "Week 6 mouse project.vcxproj", "{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Debug|x64.ActiveCfg = Debug|x64
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Debug|x64.Build.0 = Debug|x64
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Debug|x86.ActiveCfg = Debug|Win32
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Debug|x86.Build.0 = Debug|Win32
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Release|x64.ActiveCfg = Release|x64
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Release|x64.Build.0 = Release|x64
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Release|x86.ActiveCfg = Release|Win32
+		{E65E4175-FCE5-4A7F-B1AD-FFF42DEDB429}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05431A5F-33AB-41AE-A86D-C5651DD243D5}
+	EndGlobalSection
+EndGlobal
