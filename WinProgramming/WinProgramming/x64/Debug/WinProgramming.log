@@ -1,0 +1,9 @@
+﻿  main.c
+C:\Users\user\Desktop\worbs2030\WinProgramming\mywin.h(30,1): error C1020: 예기치 않은 #endif입니다.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+  mywin.c
+C:\Users\user\Desktop\worbs2030\WinProgramming\mywin.h(30,1): error C1020: 예기치 않은 #endif입니다.
+  (소스 파일 'mywin.c'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...

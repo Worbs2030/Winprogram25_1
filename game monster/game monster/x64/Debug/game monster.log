@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\user\Desktop\worbs2030\game monster\game monster\main.c(62,9): warning C4013: 'usleep'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+main.obj : error LNK2019: usleepmain 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\user\Desktop\worbs2030\game monster\x64\Debug\game monster.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

@@ -1,0 +1,8 @@
+﻿  console.c
+C:\Users\user\Desktop\worbs2030\Project8\console\console.c(10,24): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+      C:\Users\user\Desktop\worbs2030\Project8\console\console.c(10,24):
+      자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 1개가 제공되었습니다.
+  
+C:\Users\user\Desktop\worbs2030\Project8\console\console.c(122,20): warning C4047: '함수': 'int'의 간접 참조 수준이 'char [6]'과(와) 다릅니다.
+C:\Users\user\Desktop\worbs2030\Project8\console\console.c(122,20): warning C4024: 'fillBackground': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+  console.vcxproj -> C:\Users\user\Desktop\worbs2030\Project8\x64\Debug\console.exe
