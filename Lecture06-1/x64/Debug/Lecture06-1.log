@@ -1,0 +1,4 @@
+﻿  maaain.c
+C:\Users\user\Desktop\Worbs2030\Lecture06-1\maaain.c(22,88): warning C4244: '초기화 중': 'LONG'에서 'SHORT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\Worbs2030\Lecture06-1\maaain.c(22,105): warning C4244: '초기화 중': 'LONG'에서 'SHORT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Lecture06-1.vcxproj -> C:\Users\user\Desktop\Worbs2030\Lecture05-2\x64\Debug\Lecture06-1.exe
