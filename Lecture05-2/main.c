@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>  
+
+//ÀÌ¹ø¿¡ ¹è¿î 4ÁÖÂ÷ c¾ğ¾î »ùÇÃ°ú 0À» ÁÂ¿ì·Î ÀÌµ¿½ÃÅ°´Â °ÔÀÓÀ» ÇÕÃÄº¸¾Ò½À´Ï´Ù.
+
+#define WIDTH 40  //°ÔÀÓÈ­¸é Å©±â
+
+int print_game(int position) {
+    system("cls");  
+
+    for (int i = 0; i < WIDTH; i++) {
+        if (i == position)
+            printf("0");
+        else
+            printf("_");
+    }
+    printf("\n");
+}
+
+int showMenu() { // °ÔÀÓ ÃÊ±â È­¸é
+    puts("************************************");
+    puts("*     0À» ÁÂ¿ì·Î ¿òÁ÷ÀÌ´Â °ÔÀÓ     *");
+    puts("************************************");
+    puts("");
+    puts("1. °ÔÀÓ½ÃÀÛ");
+    puts("2. Á¾·á");
+    return 0;
+}
+
+int main() { //A¿Í D¸¦ ÀÌ¿ëÇÏ¿© 0À» ¿òÁ÷ÀÌ°Ô ÇÏ´Â ÄÚµå
+
+    showMenu();
+
+    char input = _getch();  
+
+    if (input == '1') {
+        int position = WIDTH / 2;  
+
+        while (1) {
+            if (_kbhit()) {  
+                char ch = _getch();  
+
+                if (ch == 'a' || ch == 'A') {
+                    if (position > 0)  
+                        position--;
+                }
+                else if (ch == 'd' || ch == 'D') {
+                    if (position < WIDTH - 1)  
+                        position++;
+                }
+            }
+
+            print_game(position);
+        }
+    }
+    else if (input == '2') { //¼ıÀÚÅ° 2¸¦ ´­·¶À» ¶§ ³ª¿À´Â È­¸é
+        puts("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+    }
+    else { //¼ıÀÚÅ° 1°ú 2¸¦ Á¦¿ÜÇÑ ´Ù¸¥ Å°¸¦ ´­·¶À» ¶§ ³ª¿À´Â È­¸é
+        puts("1¹ø°ú 2¹ø Áß ÇÏ³ª¸¦ ´­·¯ÁÖ¼¼¿ä.");
+    }
+
+    return 0;
+=======
 //ANSI(American National Standards Institute)
 //- ANSI ÄÚµå(ANSI Escape Code)´Â ÅØ½ºÆ® ±â¹İÀÇ ÅÍ¹Ì³Î¿¡¼­ È­¸éÀÇ ½ºÅ¸ÀÏÀ» Á¦¾îÇÏ´Â µ¥ »ç¿ëµÇ´Â Æ¯¼öÇÑ Á¦¾î ¹®ÀÚ
 //- ÀÌ Ç¥ÁØÀº ÅÍ¹Ì³Î¿¡¼­ ÅØ½ºÆ®ÀÇ »ö»ó, ¹è°æ»ö, ±½±â, ¹ØÁÙ, ±ô¹ÚÀÓ µîÀÇ ¼Ó¼ºÀ» ¼³Á¤ÇÏ°Å³ª º¯°æÇÒ ¼ö ÀÖ´Â ¹æ¹ıÀ» Á¤ÀÇ
@@ -41,4 +107,5 @@ int main() {
     puts("\033[1m\033[34mÀÌ ÅØ½ºÆ®´Â ±½°í ÆÄ¶õ»öÀÔ´Ï´Ù.\033[0m\n");
 
     return 0;
+>>>>>>> 08e4257 (ì¤‘ê°„ëŒ€ë¹„)
 }
