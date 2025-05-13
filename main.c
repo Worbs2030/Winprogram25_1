@@ -1,65 +1,43 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>  
+ï»¿#pragma comment(lib, "Opengl32.lib")
+#include <GLFW/glfw3.h>
+#include <math.h>
 
-//ÀÌ¹ø¿¡ ¹è¿î 4ÁÖÂ÷ c¾ğ¾î »ùÇÃ°ú 0À» ÁÂ¿ì·Î ÀÌµ¿½ÃÅ°´Â °ÔÀÓÀ» ÇÕÃÄº¸¾Ò½À´Ï´Ù.
+#define PI 3.14159265
 
-#define WIDTH 40  //°ÔÀÓÈ­¸é Å©±â
-
-int print_game(int position) {
-    system("cls");  
-
-    for (int i = 0; i < WIDTH; i++) {
-        if (i == position)
-            printf("0");
-        else
-            printf("_");
+void circle(float cx, float cy, float r, int segments) {
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(cx, cy);
+    for (int i = 0; i <= segments; i++) {
+        float angle = 2.0f * PI * i / segments;
+        float x = r * cosf(angle);
+        float y = r * sinf(angle);
+        glVertex2f(cx + x, cy + y);
     }
-    printf("\n");
+    glEnd();
 }
 
-int showMenu() { // °ÔÀÓ ÃÊ±â È­¸é
-    puts("************************************");
-    puts("*     0À» ÁÂ¿ì·Î ¿òÁ÷ÀÌ´Â °ÔÀÓ     *");
-    puts("************************************");
-    puts("");
-    puts("1. °ÔÀÓ½ÃÀÛ");
-    puts("2. Á¾·á");
-    return 0;
-}
+int main() {
+    if (!glfwInit()) return -1;
 
-int main() { //A¿Í D¸¦ ÀÌ¿ëÇÏ¿© 0À» ¿òÁ÷ÀÌ°Ô ÇÏ´Â ÄÚµå
-
-    showMenu();
-
-    char input = _getch();  
-
-    if (input == '1') {
-        int position = WIDTH / 2;  
-
-        while (1) {
-            if (_kbhit()) {  
-                char ch = _getch();  
-
-                if (ch == 'a' || ch == 'A') {
-                    if (position > 0)  
-                        position--;
-                }
-                else if (ch == 'd' || ch == 'D') {
-                    if (position < WIDTH - 1)  
-                        position++;
-                }
-            }
-
-            print_game(position);
-        }
-    }
-    else if (input == '2') { //¼ıÀÚÅ° 2¸¦ ´­·¶À» ¶§ ³ª¿À´Â È­¸é
-        puts("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
-    }
-    else { //¼ıÀÚÅ° 1°ú 2¸¦ Á¦¿ÜÇÑ ´Ù¸¥ Å°¸¦ ´­·¶À» ¶§ ³ª¿À´Â È­¸é
-        puts("1¹ø°ú 2¹ø Áß ÇÏ³ª¸¦ ´­·¯ÁÖ¼¼¿ä.");
+    GLFWwindow* window = glfwCreateWindow(500, 500, "GLFW: ì›", NULL, NULL);
+    if (!window) {
+        glfwTerminate();
+        return -1;
     }
 
+    glfwMakeContextCurrent(window);
+
+    while (!glfwWindowShouldClose(window)) {
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        circle(0.0f, 0.0f, 0.4f, 100);  // ì¤‘ì‹¬ì„ (0,0)ìœ¼ë¡œ í•˜ê³ , ë°˜ì§€ë¦„ì„ 0.4ë¡œ ì„¤ì •
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
     return 0;
 }
