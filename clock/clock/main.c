@@ -1,4 +1,4 @@
-ï»¿#pragma comment(lib, "Opengl32.lib")
+#pragma comment(lib, "Opengl32.lib")
 #include <GLFW/glfw3.h>
 #include <math.h>
 #include <time.h>
@@ -109,7 +109,7 @@ void drawTimeString(const char* str, float startX, float startY, float size, flo
 int main(void) {
     if (!glfwInit()) return -1;
 
-    GLFWwindow* window = glfwCreateWindow(700, 700, "GLFW: í•œêµ­ì‹œê°„ ì‹œê³„", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(700, 700, "GLFW: ÇÑ±¹½Ã°£ ½Ã°è", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -143,10 +143,10 @@ int main(void) {
         getEndpoint(secondAngle, 0.2f, &sx, &sy);
         sx += -0.54f;
 
-        // ì¤„ì¸ ì‹œê³„ ë³¸ì²´
+        // ÁÙÀÎ ½Ã°è º»Ã¼
         circle(0.0f, 0.0f, 0.9f, 100, 1.0f, 1.0f, 1.0f);
 
-        // íšŒìƒ‰ í…Œë‘ë¦¬ ì¤„ì´ê¸°
+        // È¸»ö Å×µÎ¸® ÁÙÀÌ±â
         glLineWidth(7.0f);
         glBegin(GL_LINE_LOOP);
         glColor3f(0.5f, 0.5f, 0.5f);
@@ -158,23 +158,23 @@ int main(void) {
         }
         glEnd();
 
-        // ëˆˆê¸ˆ ì¤„ì´ê¸°
+        // ´«±İ ÁÙÀÌ±â
         drawClockTicks(0.0f, 0.0f, 0.9f, 60, 0.09f, 0.045f, 5, 3.0f, 1.2f);
 
-        // ì¤‘ì‹¬ ì 
+        // Áß½É Á¡
         circle(0.0f, 0.0f, 0.02f, 30, 0.0f, 0.0f, 0.0f);
 
-        // ì‹œì¹¨, ë¶„ì¹¨
-        drawLine(0.0f, 0.0f, hx, hy, 0.0f, 0.0f, 0.0f, 5.0f);
-        drawLine(0.0f, 0.0f, mx, my, 0.0f, 0.0f, 0.0f, 3.5f);
+        // ½ÃÄ§, ºĞÄ§
+        drawLine(0.0f, 0.0f, hx, hy, 0.0f, 0.0f, 0.0f, 8.0f);
+        drawLine(0.0f, 0.0f, mx, my, 0.0f, 0.0f, 0.0f, 5.0f);
 
-        // ì´ˆì¹¨ ë³´ì¡° ì‹œê³„ ë° ì´ˆì¹¨
+        // ÃÊÄ§ º¸Á¶ ½Ã°è ¹× ÃÊÄ§
         circle(-0.54f, 0.0f, 0.22f, 50, 0.5f, 0.5f, 0.5f);
         drawClockTicks(-0.54f, 0.0f, 0.22f, 60, 0.03f, 0.018f, 10, 2.2f, 1.0f);
         circle(-0.54f, 0.0f, 0.012f, 30, 0.0f, 0.0f, 0.0f);
         drawLine(-0.54f, 0.0f, sx, sy, 1.0f, 0.0f, 0.0f, 2.5f);
 
-        // ë””ì§€í„¸ ì‹œê³„
+        // µğÁöÅĞ ½Ã°è
         char timeStr[9];
         snprintf(timeStr, sizeof(timeStr), "%02d:%02d:%02d", hour, minute, second);
         drawTimeString(timeStr, -0.35f, -0.40f, 0.025f, 0.3f, 0.0f, 0.0f, 0.0f);
