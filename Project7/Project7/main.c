@@ -165,8 +165,8 @@ int main(void) {
         circle(0.0f, 0.0f, 0.02f, 30, 0.0f, 0.0f, 0.0f);
 
         // 시침, 분침
-        drawLine(0.0f, 0.0f, hx, hy, 0.0f, 0.0f, 0.0f, 5.0f);
-        drawLine(0.0f, 0.0f, mx, my, 0.0f, 0.0f, 0.0f, 3.5f);
+        drawLine(0.0f, 0.0f, hx, hy, 0.0f, 0.0f, 0.0f, 8.0f);
+        drawLine(0.0f, 0.0f, mx, my, 0.0f, 0.0f, 0.0f, 5.0f);
 
         // 초침 보조 시계 및 초침
         circle(-0.54f, 0.0f, 0.22f, 50, 0.5f, 0.5f, 0.5f);
